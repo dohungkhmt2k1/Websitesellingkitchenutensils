@@ -1,3 +1,8 @@
+<%@page import="java.sql.Connection"%>
+<%@page import="com.webkitchen.dao.ProductDAO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.webkitchen.model.Product"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -60,12 +65,25 @@
 <hr>
 <div class="products">
        
-        <a href="../html/spnoichao.html">
+      <%List<Product> product = ProductDAO.getproductList();
+       for(Product p : product){
+           out.print("<a href='spchienkhongdau?masp=" + p.getMaSP()+ "'>");
+           out.print("<div class='product01'>");
+           out.print(" <img src='images/product/dungcunhabep/bonoichao/chaochien-119-3.jpg'  id='img01'>");
+           out.print("<div class='product-sub01'>");
+           out.print("<p>"+p.getTenSP()+"</p>");
+           out.print("<span id='gia'>"+p.getGiaGoc()+"vnd</span>");
+           out.print("<p>"+p.getGiaGiam()+"  vnd</p>");
+           out.print("<span id='giam'>-"+((p.getGiaGoc() - p.getGiaGiam())/p.getGiaGoc())*100+"%</span>");
+
+           out.print("</div></div></a>");
+       }%>
+       <!-- 
             <div class="product01">
             <img src="images/product/dungcunhabep/bonoichao/chaochien-119-3.jpg" alt="" id="img01">
-            <div class="product-sub01">
-                <p>Bộ 3 chảo chiên, nồi áp suất chống dính ceramic vân đá 3D ECORAMIC</p>
-                <p>990.000đ</p>
+            
+                
+                
                 <span id="gia">1.399.000đ</span> 
                 <span id="giam">-29%</span>
                 <div class="result">
@@ -76,8 +94,7 @@
                     <i class="fa fa-star-half-o"></i>
                     <span id="danhgia"> 106 đánh giá</span>    
                 </div>
-            </div>
-        </div></a>
+            
         <a href="../html/spchienkhongdau.html">
         <div class="product01">
             <img src="images/product/dungcunhabep/noichienkhongdau/MAF-09B2.png" alt="" id="img01">
@@ -171,7 +188,7 @@
             </div>
         </div>
     </div>
-  </a>
+  </a> --> 
     </div>
     
 </div>
