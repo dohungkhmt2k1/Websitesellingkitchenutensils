@@ -47,7 +47,7 @@
                 <div class="form-group">
                   <div class="custom-control  custom-checkbox">
                     <input type="checkbox" name="luucookie" value="Y" class="custom-control-input m-0" id="exampleCheck">
-                   <label class="custom-control-label" for="exampleCheck">Nhớ mật khẩu cho lần đăng nhập sau</label>
+                   <label class="custom-control-label" for="exampleCheck">Nhớ mật khẩu</label>
                  </div>
                 </div>
                 <div class="form-group">

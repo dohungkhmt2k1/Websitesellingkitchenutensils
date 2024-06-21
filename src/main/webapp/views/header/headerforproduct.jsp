@@ -15,7 +15,7 @@
             <a class="nav-link     font-weight-bold " href="${pageContext.request.contextPath}/#banner-statistic-shop">Shop</a>
           </li>
           <li class="nav-item mx-3 ">
-            <a class="nav-link    font-weight-bold" href="#information-page"> Contact</a>
+            <a class="nav-link    font-weight-bold" href="${pageContext.request.contextPath}/contact"> Contact</a>
           </li>
         </ul>
       </div>
@@ -30,9 +30,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link  mr-4 p-2">
-                <i class="fas fa-search"></i>
-              </a>
+              <p class="nav-link  mr-4 p-2">${logined.userName}</p>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link  mr-4 p-2">
