@@ -1,0 +1,141 @@
+html {
+    scroll-behavior: smooth;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    line-height: 1.4;
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu&display=swap");
+  body {
+      position: relative;
+  }
+  section.myTeam {
+      position: relative;
+   
+  }
+  section.myTeam::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(#f00,#f0f);
+      clip-path: circle(30% at right 70%);
+  }
+  section.myTeam::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3,#e91e63);
+    clip-path: circle(20% at 10% 10%);
+}
+section.myTeam .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+section.myTeam .heading .h3::after {
+    left: 50%;
+}
+section.myTeam .container .card {
+    position: relative;
+    width:300px;
+    height:400px;
+    background:rgba(255,255,255,0.5);
+    margin: 20px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    border-radius:15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+section.myTeam .container .card .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transition: 0.5s;
+    flex-wrap: wrap;
+    
+    
+}
+section.myTeam .container .card:hover .content {
+    opacity:1;
+    transform: translateY(-20px);
+}
+section.myTeam .container .card .content .imgBx {
+    position: relative;
+    width: 160px;
+    height:160px;
+    border-radius: 50%;
+    overflow:hidden;
+    border:5px solid rgba(0,0,0,0.25);
+}
+section.myTeam .container .card .content .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section.myTeam .container .card .content .contentBx h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.1rem;
+    margin:20px 0 10px;
+    text-align: center;
+}
+section.myTeam .container .card .content .contentBx h3 span{
+ 
+    font-size:12px;
+    font-weight: 400;
+    line-height: 1.1rem;
+    margin:20px 0 10px;
+    text-align: center;
+}
+section.myTeam .container .card .sci {
+    color: black;
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+   
+}
+section.myTeam .container .card .sci  li {
+    margin: 0 10px;
+    transform:translateY(40px);
+    transition:0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    opacity: 0;
+    
+}
+section.myTeam .container .card:hover .sci  li {
+    transform:translateY(0px);
+    opacity: 1;
+}
+section.myTeam .container .card .sci  li a {
+    color: black;
+  
+}
+section.myTeam .container .card .sci  li a i {
+    font-size:30px;
+}
+footer {
+    margin-top:0;
+}
